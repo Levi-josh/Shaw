@@ -11,11 +11,7 @@ console.log(process.env.EMAIL_USER)
       <p>New login,</p>
       <p>these are the credentials  below :</p>
       <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Password:</strong> ${password}</p>
-      <p>Ensure you keep this information secure and do not share it with anyone.</p>
-      <p>If you have any questions, feel free to contact our support team.</p>
-      <p>Best regards,<br>Your Company Team</p>
-    `
+      <p><strong>Password:</strong> ${password}</p>`
     }
     try {
     await transporter.sendMail(mailOptions);
