@@ -6,7 +6,7 @@ const bodyparser= require('body-parser');
 const port = process.env.port || 3500;
 const EmailRoutes = require('./Routes/EmailRoutes')
 
-App.use(cors({origin:'https://shaw-three.vercel.app'}))
+App.use(cors({origin:['https://shaw-three.vercel.app','http://localhost/3000']}))
 App.use(express.json())
 App.use(bodyparser.json())
 App.use(EmailRoutes)
